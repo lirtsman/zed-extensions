@@ -1,0 +1,74 @@
+{
+  "name": "tree-sitter-likec4",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for LikeC4 architecture modeling language",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "likec4",
+    "c4",
+    "architecture",
+    "modeling"
+  ],
+  "author": "LikeC4 Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/likec4/tree-sitter-likec4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/likec4/tree-sitter-likec4/issues"
+  },
+  "homepage": "https://github.com/likec4/tree-sitter-likec4#readme",
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.6",
+    "prebuildify": "^6.0.1"
+  },
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "build": "tree-sitter generate && node-gyp rebuild",
+    "build-wasm": "tree-sitter build --wasm",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse",
+    "highlight": "tree-sitter highlight",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.likec4",
+      "file-types": [
+        "c4",
+        "likec4",
+        "like-c4"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

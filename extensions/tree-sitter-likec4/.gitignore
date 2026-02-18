@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build artifacts
+build/
+*.wasm
+*.node
+
+# Prebuilds
+prebuilds/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Test artifacts
+test-*.txt
+
+# Package tarballs
+*.tgz
+
+# Note: src/ directory is NOT ignored because it contains
+# the generated parser.c needed for the Zed extension

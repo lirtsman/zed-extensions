@@ -1,0 +1,300 @@
+specification {
+
+  // ---------------------------------------------------------------------------
+  // TERRAFORM & GITOPS
+  // ---------------------------------------------------------------------------
+
+  element terraform-module {
+    notation "Terraform Module"
+    style {
+      shape rectangle
+      color indigo
+      icon tech:terraform
+    }
+  }
+
+  element argocd-application {
+    notation "ArgoCD Application"
+    style {
+      shape rectangle
+      color red
+      icon @/argocd.svg
+    }
+  }
+
+  element argocd-applicationset {
+    notation "ArgoCD ApplicationSet"
+    style {
+      shape rectangle
+      color red
+      icon @/argocd.svg
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // KUBERNETES CORE
+  // ---------------------------------------------------------------------------
+
+  element kubernetes-cluster {
+    notation "Kubernetes Cluster"
+    style {
+      shape rectangle
+      color blue
+      icon tech:kubernetes
+    }
+  }
+
+  element namespace {
+    notation "Namespace"
+    style {
+      shape rectangle
+      color blue
+      icon @/k8s-ns.svg
+    }
+  }
+
+  element configmap {
+    notation "ConfigMap"
+    style {
+      shape rectangle
+      color blue
+      icon tech:kubernetes
+    }
+  }
+
+  element secret {
+    notation "Secret"
+    style {
+      shape rectangle
+      color slate
+      icon @/k8s-secret.svg
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // OPERATORS & CONTROLLERS
+  // ---------------------------------------------------------------------------
+
+  element operator {
+    notation "Kubernetes Operator"
+    style {
+      shape rectangle
+      color amber
+      icon tech:kubernetes
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // NODE PROVISIONING (Karpenter)
+  // ---------------------------------------------------------------------------
+
+  element karpenter {
+    notation "Karpenter"
+    style {
+      shape rectangle
+      color sky
+      icon @/karpenter.svg
+    }
+  }
+
+  element nodepool {
+    notation "Karpenter NodePool"
+    style {
+      shape rectangle
+      color sky
+      icon tech:kubernetes
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // ISOLATION & VIRTUALIZATION
+  // ---------------------------------------------------------------------------
+
+  element vcluster {
+    notation "vCluster"
+    style {
+      shape rectangle
+      color sky
+      icon @/vcluster.svg
+    }
+  }
+
+  element environment {
+    notation "Ephemeral Environment"
+    style {
+      shape rectangle
+      color green
+      opacity 30%
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // GATEWAY API
+  // ---------------------------------------------------------------------------
+
+  element gateway {
+    notation "Gateway"
+    style {
+      shape rectangle
+      color indigo
+      icon @/gateway.svg
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // AWS RESOURCES
+  // ---------------------------------------------------------------------------
+
+  element aws-account {
+    notation "AWS Account"
+    style {
+      shape rectangle
+      color slate
+      icon @/aws.svg
+    }
+  }
+
+  element aws-route53 {
+    notation "AWS Route53"
+    style {
+      shape rectangle
+      color amber
+      icon aws:route-53
+    }
+  }
+
+  element aws-iam-role {
+    notation "AWS IAM Role"
+    style {
+      shape rectangle
+      color red
+      icon aws:iam-identity-center
+    }
+  }
+
+  element aws-acm {
+    notation "AWS ACM"
+    style {
+      shape rectangle
+      color amber
+      icon aws:certificate-manager
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // DATA & MESSAGING INFRASTRUCTURE
+  // ---------------------------------------------------------------------------
+
+  element kafka {
+    notation "Apache Kafka"
+    style {
+      shape rectangle
+      color sky
+      icon tech:kafka
+    }
+  }
+
+  element postgresql {
+    notation "PostgreSQL"
+    style {
+      shape rectangle
+      color blue
+      icon tech:postgresql
+    }
+  }
+
+  element openSearch {
+    notation "OpenSearch"
+    style {
+      shape rectangle
+      color indigo
+      icon tech:elasticsearch
+    }
+  }
+
+  element temporal {
+    notation "Temporal Cluster"
+    style {
+      shape rectangle
+      color indigo
+      icon @/temporal.svg
+    }
+  }
+
+  element temporal-namespace {
+    notation "Temporal Namespace"
+    style {
+      shape rectangle
+      color indigo
+      icon @/temporal.svg
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // DEPLOYMENT & CI/CD
+  // ---------------------------------------------------------------------------
+
+  element argocd {
+    notation "ArgoCD"
+    style {
+      shape rectangle
+      color red
+      icon @/argocd.svg
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // SYSTEM BOUNDARIES
+  // ---------------------------------------------------------------------------
+
+  element system {
+    notation "Software System"
+    style {
+      color amber
+      opacity 20%
+    }
+  }
+
+  element external-system {
+    notation "External System"
+    style {
+      opacity 20%
+      color muted
+    }
+  }
+
+  element component {
+    style {
+      opacity 20%
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // TAGS & RELATIONSHIPS
+  // ---------------------------------------------------------------------------
+
+  tag deprecated {
+    color rgb(100 100 100)
+  }
+
+  tag custom-operator {
+    color rgb(245 158 11)
+  }
+
+  tag community-operator {
+    color rgb(34 197 94)
+  }
+
+  relationship solid {
+    line solid
+  }
+
+  relationship many-to-many {
+    line dotted
+  }
+
+  relationship manages {
+    line solid
+    color amber
+  }
+}

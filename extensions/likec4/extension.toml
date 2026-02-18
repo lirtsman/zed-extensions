@@ -1,0 +1,19 @@
+id = "likec4"
+name = "LikeC4"
+description = "LikeC4 architecture modeling language support with syntax highlighting and language server integration."
+version = "0.1.0"
+schema_version = 1
+authors = ["Ilya Lirtsman <ilya.lirtsman@gmail.com.com>"]
+repository = "https://github.com/lirtsman/zed-extensions"
+
+[language_servers.likec4-language-server]
+name = "LikeC4 Language Server"
+languages = ["LikeC4"]
+
+# NOTE: After pushing to GitHub, update the commit hash below
+# Run: git rev-parse HEAD
+# to get the current commit hash
+[grammars.likec4]
+repository = "https://github.com/lirtsman/zed-extensions"
+path = "extensions/tree-sitter-likec4"
+commit = "b7b029242109df0b08c713fb24d12c9d731e7d97"

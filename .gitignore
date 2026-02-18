@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Rust build artifacts
+target/
+Cargo.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tree-sitter build artifacts
+*.wasm
+*.node
+build/
+prebuilds/
+
+# Extension build artifacts
+*.wasm
+
+# Logs
+*.log
+
+# Test artifacts
+test-*.txt
+
+# Package tarballs
+*.tgz

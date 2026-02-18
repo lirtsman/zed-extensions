@@ -1,0 +1,2485 @@
+[
+  {
+    "type": "arrow_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "autoLayout_options",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "autoLayout_property",
+    "named": true,
+    "fields": {
+      "direction": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "layout_direction",
+            "named": true
+          }
+        ]
+      },
+      "options": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "autoLayout_options",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "boolean",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "border_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "border_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "border_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "color_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "color_function",
+            "named": true
+          },
+          {
+            "type": "hex_color",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "color_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "color_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "color_function",
+            "named": true
+          },
+          {
+            "type": "color_value",
+            "named": true
+          },
+          {
+            "type": "hex_color",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "color_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "deployment_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "deployment_node_definition",
+          "named": true
+        },
+        {
+          "type": "instance_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "deployment_node_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "deployment_node_definition",
+          "named": true
+        },
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "icon_property",
+          "named": true
+        },
+        {
+          "type": "instance_definition",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "tag_annotation",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "deployment_node_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "title": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "deployment_node_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "description_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "markdown_string",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "dynamic_view_definition",
+    "named": true,
+    "fields": {
+      "element": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "view_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "element_declaration",
+          "named": true
+        },
+        {
+          "type": "icon_property",
+          "named": true
+        },
+        {
+          "type": "link_property",
+          "named": true
+        },
+        {
+          "type": "metadata_property",
+          "named": true
+        },
+        {
+          "type": "relationship_statement",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "tag_annotation",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_declaration",
+    "named": true,
+    "fields": {
+      "kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "title": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "element_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_kind_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "notation_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "element_selector",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        },
+        {
+          "type": "with_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exclude_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "element_selector",
+          "named": true
+        },
+        {
+          "type": "wildcard",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "extend_element",
+    "named": true,
+    "fields": {
+      "element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "element_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "extend_view",
+    "named": true,
+    "fields": {
+      "view": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "view_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "predicate_definition",
+          "named": true
+        },
+        {
+          "type": "predicate_group_definition",
+          "named": true
+        },
+        {
+          "type": "style_group",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_block",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "autoLayout_property",
+          "named": true
+        },
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "exclude_statement",
+          "named": true
+        },
+        {
+          "type": "group_block",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "link_property",
+          "named": true
+        },
+        {
+          "type": "navigateTo_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "style_group",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "head_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "arrow_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "iconColor_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "color_function",
+            "named": true
+          },
+          {
+            "type": "color_value",
+            "named": true
+          },
+          {
+            "type": "hex_color",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "iconPosition_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "iconSize_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "size_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "icon_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "icon_reference",
+            "named": true
+          },
+          {
+            "type": "none",
+            "named": false
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "icon_reference",
+    "named": true,
+    "fields": {
+      "library": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "aws",
+            "named": false
+          },
+          {
+            "type": "azure",
+            "named": false
+          },
+          {
+            "type": "bootstrap",
+            "named": false
+          },
+          {
+            "type": "gcp",
+            "named": false
+          },
+          {
+            "type": "tech",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "import_statement",
+    "named": true,
+    "fields": {
+      "path": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "include_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "element_selector",
+          "named": true
+        },
+        {
+          "type": "wildcard",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "instance_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "icon_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "tag_annotation",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "instance_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "of_element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "instance_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "labeled_relationship",
+    "named": true,
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "layout_direction",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "line_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "line_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "line_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "link_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "markdown_string",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "metadata_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "model_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "element_declaration",
+          "named": true
+        },
+        {
+          "type": "extend_element",
+          "named": true
+        },
+        {
+          "type": "relationship_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiple_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "boolean",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "navigateTo_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "notation_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "number",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "opacity_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "padding_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "size_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "predicate_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "exclude_statement",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "predicate_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "predicate_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "predicate_group_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "predicate_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qualified_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relationship_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "navigateTo_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "tag_annotation",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relationship_kind_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "color_property",
+          "named": true
+        },
+        {
+          "type": "head_property",
+          "named": true
+        },
+        {
+          "type": "line_property",
+          "named": true
+        },
+        {
+          "type": "notation_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "tail_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relationship_operator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "labeled_relationship",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relationship_statement",
+    "named": true,
+    "fields": {
+      "source": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      },
+      "title": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "relationship_body",
+          "named": true
+        },
+        {
+          "type": "relationship_operator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "shape_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "shape_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "size_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "size_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "size_value",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "deployment_block",
+          "named": true
+        },
+        {
+          "type": "global_block",
+          "named": true
+        },
+        {
+          "type": "import_statement",
+          "named": true
+        },
+        {
+          "type": "model_block",
+          "named": true
+        },
+        {
+          "type": "specification_block",
+          "named": true
+        },
+        {
+          "type": "views_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "specification_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "color_definition",
+          "named": true
+        },
+        {
+          "type": "element_kind_definition",
+          "named": true
+        },
+        {
+          "type": "relationship_kind_definition",
+          "named": true
+        },
+        {
+          "type": "tag_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "style_block",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "element_selector",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "border_property",
+          "named": true
+        },
+        {
+          "type": "color_property",
+          "named": true
+        },
+        {
+          "type": "head_property",
+          "named": true
+        },
+        {
+          "type": "iconColor_property",
+          "named": true
+        },
+        {
+          "type": "iconPosition_property",
+          "named": true
+        },
+        {
+          "type": "iconSize_property",
+          "named": true
+        },
+        {
+          "type": "icon_property",
+          "named": true
+        },
+        {
+          "type": "line_property",
+          "named": true
+        },
+        {
+          "type": "multiple_property",
+          "named": true
+        },
+        {
+          "type": "notation_property",
+          "named": true
+        },
+        {
+          "type": "opacity_property",
+          "named": true
+        },
+        {
+          "type": "padding_property",
+          "named": true
+        },
+        {
+          "type": "shape_property",
+          "named": true
+        },
+        {
+          "type": "size_property",
+          "named": true
+        },
+        {
+          "type": "tail_property",
+          "named": true
+        },
+        {
+          "type": "textSize_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "style_group",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "style_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag_annotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "tag_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "tag_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tail_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "arrow_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "technology_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "textSize_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "size_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "title_property",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "view_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "autoLayout_property",
+          "named": true
+        },
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "exclude_statement",
+          "named": true
+        },
+        {
+          "type": "group_block",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "link_property",
+          "named": true
+        },
+        {
+          "type": "navigateTo_property",
+          "named": true
+        },
+        {
+          "type": "style_block",
+          "named": true
+        },
+        {
+          "type": "style_group",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "view_definition",
+    "named": true,
+    "fields": {
+      "element": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "view_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "views_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "dynamic_view_definition",
+          "named": true
+        },
+        {
+          "type": "extend_view",
+          "named": true
+        },
+        {
+          "type": "view_definition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_and",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "where_and",
+          "named": true
+        },
+        {
+          "type": "where_condition",
+          "named": true
+        },
+        {
+          "type": "where_not",
+          "named": true
+        },
+        {
+          "type": "where_or",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "where_and",
+          "named": true
+        },
+        {
+          "type": "where_condition",
+          "named": true
+        },
+        {
+          "type": "where_not",
+          "named": true
+        },
+        {
+          "type": "where_or",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_condition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "tag_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_not",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "where_and",
+          "named": true
+        },
+        {
+          "type": "where_condition",
+          "named": true
+        },
+        {
+          "type": "where_not",
+          "named": true
+        },
+        {
+          "type": "where_or",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_or",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "where_and",
+          "named": true
+        },
+        {
+          "type": "where_condition",
+          "named": true
+        },
+        {
+          "type": "where_not",
+          "named": true
+        },
+        {
+          "type": "where_or",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wildcard",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "qualified_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "color_property",
+          "named": true
+        },
+        {
+          "type": "description_property",
+          "named": true
+        },
+        {
+          "type": "icon_property",
+          "named": true
+        },
+        {
+          "type": "navigateTo_property",
+          "named": true
+        },
+        {
+          "type": "shape_property",
+          "named": true
+        },
+        {
+          "type": "technology_property",
+          "named": true
+        },
+        {
+          "type": "title_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "\"\"\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "'''",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": "-[",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": ".*",
+    "named": false
+  },
+  {
+    "type": ".**",
+    "named": false
+  },
+  {
+    "type": "._",
+    "named": false
+  },
+  {
+    "type": ".__",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "<-",
+    "named": false
+  },
+  {
+    "type": "<->",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "BottomTop",
+    "named": false
+  },
+  {
+    "type": "LeftRight",
+    "named": false
+  },
+  {
+    "type": "RightLeft",
+    "named": false
+  },
+  {
+    "type": "TopBottom",
+    "named": false
+  },
+  {
+    "type": "]->",
+    "named": false
+  },
+  {
+    "type": "amber",
+    "named": false
+  },
+  {
+    "type": "and",
+    "named": false
+  },
+  {
+    "type": "autoLayout",
+    "named": false
+  },
+  {
+    "type": "aws",
+    "named": false
+  },
+  {
+    "type": "azure",
+    "named": false
+  },
+  {
+    "type": "block_comment",
+    "named": true
+  },
+  {
+    "type": "blue",
+    "named": false
+  },
+  {
+    "type": "bootstrap",
+    "named": false
+  },
+  {
+    "type": "border",
+    "named": false
+  },
+  {
+    "type": "browser",
+    "named": false
+  },
+  {
+    "type": "bucket",
+    "named": false
+  },
+  {
+    "type": "color",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "component",
+    "named": false
+  },
+  {
+    "type": "crow",
+    "named": false
+  },
+  {
+    "type": "cylinder",
+    "named": false
+  },
+  {
+    "type": "dashed",
+    "named": false
+  },
+  {
+    "type": "deployment",
+    "named": false
+  },
+  {
+    "type": "deploymentNode",
+    "named": false
+  },
+  {
+    "type": "description",
+    "named": false
+  },
+  {
+    "type": "diamond",
+    "named": false
+  },
+  {
+    "type": "document",
+    "named": false
+  },
+  {
+    "type": "dot",
+    "named": false
+  },
+  {
+    "type": "dotted",
+    "named": false
+  },
+  {
+    "type": "dynamic",
+    "named": false
+  },
+  {
+    "type": "element",
+    "named": false
+  },
+  {
+    "type": "escape_sequence",
+    "named": true
+  },
+  {
+    "type": "exclude",
+    "named": false
+  },
+  {
+    "type": "extend",
+    "named": false
+  },
+  {
+    "type": "extends",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "gcp",
+    "named": false
+  },
+  {
+    "type": "global",
+    "named": false
+  },
+  {
+    "type": "gray",
+    "named": false
+  },
+  {
+    "type": "green",
+    "named": false
+  },
+  {
+    "type": "group",
+    "named": false
+  },
+  {
+    "type": "head",
+    "named": false
+  },
+  {
+    "type": "hex_color",
+    "named": true
+  },
+  {
+    "type": "icon",
+    "named": false
+  },
+  {
+    "type": "iconColor",
+    "named": false
+  },
+  {
+    "type": "iconPosition",
+    "named": false
+  },
+  {
+    "type": "iconSize",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "import",
+    "named": false
+  },
+  {
+    "type": "include",
+    "named": false
+  },
+  {
+    "type": "indigo",
+    "named": false
+  },
+  {
+    "type": "instance",
+    "named": false
+  },
+  {
+    "type": "instanceOf",
+    "named": false
+  },
+  {
+    "type": "is",
+    "named": false
+  },
+  {
+    "type": "kind",
+    "named": false
+  },
+  {
+    "type": "large",
+    "named": false
+  },
+  {
+    "type": "lg",
+    "named": false
+  },
+  {
+    "type": "line",
+    "named": false
+  },
+  {
+    "type": "link",
+    "named": false
+  },
+  {
+    "type": "max",
+    "named": false
+  },
+  {
+    "type": "md",
+    "named": false
+  },
+  {
+    "type": "medium",
+    "named": false
+  },
+  {
+    "type": "metadata",
+    "named": false
+  },
+  {
+    "type": "min",
+    "named": false
+  },
+  {
+    "type": "mobile",
+    "named": false
+  },
+  {
+    "type": "model",
+    "named": false
+  },
+  {
+    "type": "multiple",
+    "named": false
+  },
+  {
+    "type": "muted",
+    "named": false
+  },
+  {
+    "type": "navigateTo",
+    "named": false
+  },
+  {
+    "type": "node",
+    "named": false
+  },
+  {
+    "type": "none",
+    "named": false
+  },
+  {
+    "type": "normal",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
+    "type": "notation",
+    "named": false
+  },
+  {
+    "type": "odiamond",
+    "named": false
+  },
+  {
+    "type": "odot",
+    "named": false
+  },
+  {
+    "type": "of",
+    "named": false
+  },
+  {
+    "type": "onormal",
+    "named": false
+  },
+  {
+    "type": "opacity",
+    "named": false
+  },
+  {
+    "type": "open",
+    "named": false
+  },
+  {
+    "type": "or",
+    "named": false
+  },
+  {
+    "type": "padding",
+    "named": false
+  },
+  {
+    "type": "person",
+    "named": false
+  },
+  {
+    "type": "predicate",
+    "named": false
+  },
+  {
+    "type": "predicateGroup",
+    "named": false
+  },
+  {
+    "type": "primary",
+    "named": false
+  },
+  {
+    "type": "queue",
+    "named": false
+  },
+  {
+    "type": "rank",
+    "named": false
+  },
+  {
+    "type": "rectangle",
+    "named": false
+  },
+  {
+    "type": "red",
+    "named": false
+  },
+  {
+    "type": "relationship",
+    "named": false
+  },
+  {
+    "type": "rgb",
+    "named": false
+  },
+  {
+    "type": "rgba",
+    "named": false
+  },
+  {
+    "type": "same",
+    "named": false
+  },
+  {
+    "type": "secondary",
+    "named": false
+  },
+  {
+    "type": "shape",
+    "named": false
+  },
+  {
+    "type": "sink",
+    "named": false
+  },
+  {
+    "type": "size",
+    "named": false
+  },
+  {
+    "type": "sky",
+    "named": false
+  },
+  {
+    "type": "slate",
+    "named": false
+  },
+  {
+    "type": "sm",
+    "named": false
+  },
+  {
+    "type": "small",
+    "named": false
+  },
+  {
+    "type": "solid",
+    "named": false
+  },
+  {
+    "type": "source",
+    "named": false
+  },
+  {
+    "type": "specification",
+    "named": false
+  },
+  {
+    "type": "storage",
+    "named": false
+  },
+  {
+    "type": "style",
+    "named": false
+  },
+  {
+    "type": "styleGroup",
+    "named": false
+  },
+  {
+    "type": "tag",
+    "named": false
+  },
+  {
+    "type": "tail",
+    "named": false
+  },
+  {
+    "type": "tech",
+    "named": false
+  },
+  {
+    "type": "technology",
+    "named": false
+  },
+  {
+    "type": "textSize",
+    "named": false
+  },
+  {
+    "type": "title",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "vee",
+    "named": false
+  },
+  {
+    "type": "view",
+    "named": false
+  },
+  {
+    "type": "views",
+    "named": false
+  },
+  {
+    "type": "where",
+    "named": false
+  },
+  {
+    "type": "with",
+    "named": false
+  },
+  {
+    "type": "xl",
+    "named": false
+  },
+  {
+    "type": "xlarge",
+    "named": false
+  },
+  {
+    "type": "xs",
+    "named": false
+  },
+  {
+    "type": "xsmall",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]
